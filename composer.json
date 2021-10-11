@@ -1,0 +1,38 @@
+{
+    "name": "artarts36/laravel-crontab",
+    "description": "Laravel Crontab",
+    "type": "library",
+    "require": {
+        "illuminate/console": "^8.0 | ^6.0 | ^7.0 | ^5.6",
+        "illuminate/support": "^8.0 | ^6.0 | ^7.0 | ^5.6",
+        "artarts36/crontab": "^0.2.0",
+        "php": "^7.2 | ^8.0"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ArtARTs36",
+            "email": "temicska99@mail.ru"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "ArtARTs36\\Crontab\\Bridge\\Laravel\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ArtARTs36\\Crontab\\Bridge\\Laravel\\Provider\\CrontabServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "lint": [
+            "./vendor/bin/phpcs --standard=PSR2 src"
+        ]
+    }
+}
